@@ -2,30 +2,21 @@ package com.bridgelabz.mood_analyzer_main;
 
 public class MoodAnalyzer {
 
-	public String message;
+	public String analyseMood(String message) throws Exception {
+		try {
+			String[] words = message.toLowerCase().split(" ");
+			for (String word : words) {
+				if (word.equals("happy")) {
+					return "Happy";
+				} else if (word.equals("sad")) {
+					return "Sad";
+				}
+			}
+			return "Happy";
 
-	public String MoodAnalyzer() {
-		String result = analyseMood();
-		if (result.equals("Happy")) {
+		} catch (NullPointerException e) {
 			return "Happy";
 		}
-		return "Sad";
-	}
-
-	public MoodAnalyzer(String message) {
-		this.message = message;
-	}
-
-	public String analyseMood() {
-		String[] words = message.toLowerCase().split(" ");
-		for (String word : words) {
-			if (word.toLowerCase().equals("happy")) {
-				return "Happy";
-			} else if (word.toLowerCase().equals("sad")) {
-				return "Sad";
-			}
-		}
-		return "Happy";
 	}
 
 }
