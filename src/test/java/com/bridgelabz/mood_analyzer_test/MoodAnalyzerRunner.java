@@ -9,14 +9,14 @@ public class MoodAnalyzerRunner {
 
 	@Test
 	public void ifMood_happy_return_happy_ifMood_sad_return_sad_else_return_happy() {
-		MoodAnalyzer obj = new MoodAnalyzer();
-		assertEquals("Sad", obj.analyseMood("I am in sad Mood"));	
+		MoodAnalyzer obj = new MoodAnalyzer("I am in sad Mood");
+		assertEquals("Sad", obj.MoodAnalyzer());	
 	}
 	
 	@Test
 	public void ifMood_any_return_happy_ifMood_sad_return_sad_else_return_happy() {
-		MoodAnalyzer obj = new MoodAnalyzer();
-		assertEquals("Happy", obj.analyseMood("I am in happy Mood"));	
+		MoodAnalyzer obj = new MoodAnalyzer("I am in happy Mood");
+		assertEquals("Happy", obj.MoodAnalyzer());	
 	}
 
 }
