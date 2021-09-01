@@ -12,7 +12,14 @@ public class MoodAnalyzerRunner {
 	public void exception_if_user_provides_invalid_mood() {
 		MoodAnalyzer obj = new MoodAnalyzer();
 		String result = obj.analyseMood(null);
-		assertEquals("Happy", result);	
+		assertEquals("Not a valid Input", result);	
+	}
+	
+	@Test
+	public void exception_if_user_provides_invalid_mood() {
+		MoodAnalyzer obj = new MoodAnalyzer();
+		String result = obj.analyseMood("");
+		assertEquals("Not a valid Input", result);	
 	}
 
 }
