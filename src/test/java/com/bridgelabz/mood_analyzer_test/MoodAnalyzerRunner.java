@@ -7,16 +7,12 @@ import org.junit.Test;
 
 public class MoodAnalyzerRunner {
 
-	@Test
-	public void ifMood_happy_return_happy_ifMood_sad_return_sad_else_return_happy() {
-		MoodAnalyzer obj = new MoodAnalyzer("I am in sad Mood");
-		assertEquals("Sad", obj.MoodAnalyzer());	
-	}
 	
 	@Test
-	public void ifMood_any_return_happy_ifMood_sad_return_sad_else_return_happy() {
-		MoodAnalyzer obj = new MoodAnalyzer("I am in happy Mood");
-		assertEquals("Happy", obj.MoodAnalyzer());	
+	public void exception_if_user_provides_invalid_mood() {
+		MoodAnalyzer obj = new MoodAnalyzer();
+		String result = obj.analyseMood(null);
+		assertEquals("Happy", result);	
 	}
 
 }
